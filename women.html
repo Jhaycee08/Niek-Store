@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          clifford: '#da373d',
+        },
+      },
+    },
+  };
+</script>
+    <title>Niek's Store</title>
+</head>
+<body>
+  <div>
+    <div class="navbar bg-gray-800 text-white p-4 relative">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="logo">
+                    <a href="#"><img src="niek.png" alt="Logo" class="h-10"></a>
+                </div>
+                <!-- Burger Icon -->
+                <button id="burger-menu" class="block md:hidden p-2 rounded bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <!-- Menu -->
+                <div id="menu" class="menu absolute top-full left-0 w-full bg-gray-800 p-4 z-50 md:static md:flex md:bg-transparent md:p-0">
+                    <ul class="flex flex-col md:flex-row gap-4">
+                        <li><a href="home.html" class="text-white hover:text-gray-400">Home</a></li>
+                        <li><a href="men.html" class="text-white hover:text-gray-400">Men</a></li>
+                        <li><a href="women.html" class="text-white hover:text-gray-400">Women</a></li>
+                        <li><a href="kids.html" class="text-white hover:text-gray-400">Kids</a></li>
+                        <li><a href="MyCart.html" class="text-white hover:text-gray-400">My Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+ <!-- Main Content -->
+ <div class="p-4 mt-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div id="Heels1" class="grid-item">
+            <img class="Heels1" src="7d83b429afa7025a5341cbaf67a3b25e.jpg" alt="Heels1 Image">
+            <p>Niek Heels1 <strong>$240</strong> 
+                <label for="size-heels1" class="block text-sm font-medium text-gray-700">Size:</label>
+                <select id="size-heels1" class="border rounded px-2 py-1 mt-1">
+                    <option value="6">US6</option>
+                    <option value="7">US7</option>
+                    <option value="8">US8</option>
+                    <option value="9">US9</option>
+                    <option value="10">US10</option>
+                    <option value="11">US11</option>
+                </select>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 add-to-cart" data-name="Niek Heels1" data-price="240" data-image="7d83b429afa7025a5341cbaf67a3b25e.jpg" data-size-id="size-heels1">Add to Cart</button></p>
+        </div>
+        <div id="Heels2" class="grid-item">
+            <img class="Heels2" src="v7_1200x628-5-1024x536.jpg" alt="Heels2 Image">
+            <p>Niek Heels2 <strong>$210</strong>
+                <label for="size-heels2" class="block text-sm font-medium text-gray-700">Size:</label>
+                <select id="size-heels2" class="border rounded px-2 py-1 mt-1">
+                    <option value="6">US6</option>
+                    <option value="7">US7</option>
+                    <option value="8">US8</option>
+                    <option value="9">US9</option>
+                    <option value="10">US10</option>
+                    <option value="11">US11</option>
+                </select>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 add-to-cart" data-name="Niek Heels2" data-price="210" data-image="v7_1200x628-5-1024x536.jpg" data-size-id="size-heels2">Add to Cart</button></p>
+        </div>
+        <div id="801" class="grid-item">
+            <img class="801" src="801.jpg" alt="801 Image">
+            <p>Niek NKIE <strong>$130</strong>
+                <label for="size-801" class="block text-sm font-medium text-gray-700">Size:</label>
+                <select id="size-801" class="border rounded px-2 py-1 mt-1">
+                    <option value="6">US6</option>
+                    <option value="7">US7</option>
+                    <option value="8">US8</option>
+                    <option value="9">US9</option>
+                    <option value="10">US10</option>
+                    <option value="11">US11</option>
+                </select>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 add-to-cart" data-name="Niek NKIE" data-price="130" data-image="801.jpg" data-size-id="size-801">Add to Cart</button></p>
+        </div>
+        <div id="tiktok" class="grid-item">
+            <img class="tiktok" src="tiktok-viral-transparent-sneakers.jpg" alt="Slip On Image">
+            <p>Niek Tiktok <strong>$400</strong>
+                <label for="size-tiktok" class="block text-sm font-medium text-gray-700">Size:</label>
+                <select id="size-tiktok" class="border rounded px-2 py-1 mt-1">
+                    <option value="6">US6</option>
+                    <option value="7">US7</option>
+                    <option value="8">US8</option>
+                    <option value="9">US9</option>
+                    <option value="10">US10</option>
+                    <option value="11">US11</option>
+                </select>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 add-to-cart" data-name="Niek Tiktok" data-price="400" data-image="tiktok-viral-transparent-sneakers.jpg" data-size-id="size-tiktok">Add to Cart</button></p>
+        </div>
+    </div>
+</div>
+ 
+<footer class="bg-gray-800 text-white p-4 mt-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Left Section: Copyright -->
+        <p>&copy; Dilan and Casas. All rights reserved.</p>
+
+        <!-- Right Section: Terms and Conditions -->
+        <div class="flex items-center gap-4">
+            <div class="Terms-and-Conditions">
+                <a href="https://agreementservice.svs.nike.com/ph/en_gb/rest/agreement?agreementType=termsOfUse&uxId=com.nike.commerce.ocp&country=PH&language=en&requestType=redirect" class="text-white hover:text-gray-400">
+                    Terms and Conditions
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center gap-4 mt-2">
+        <div class="facebook">
+            <a href="https://www.facebook.com/nike"><img src="facebook.png" alt="Facebook" class="h-6"></a>
+        </div>
+        <div class="twitter">
+            <a href="https://www.twitter.com/nike"><img src="twitter.png" alt="Twitter" class="h-6"></a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com/nike"><img src="instagram.png" alt="Instagram" class="h-6"></a>
+        </div>
+    </div>
+</div>
+</footer>
+<script>
+    // JavaScript to toggle the menu
+    const burgerMenu = document.getElementById('burger-menu');
+    const menu = document.getElementById('menu');
+
+    if (burgerMenu && menu) {
+        burgerMenu.addEventListener('click', () => {
+            console.log('Burger menu clicked'); // Debugging
+            menu.classList.toggle('hidden');
+            console.log('Menu classes after toggle:', menu.className); // Debugging
+        });
+    } else {
+        console.error('Burger menu or menu element not found');
+    }
+</script>
+<script>
+    // Function to handle "Add to Cart" button clicks
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            // Get item details from data attributes
+            const name = button.getAttribute('data-name');
+            const price = button.getAttribute('data-price');
+            const image = button.getAttribute('data-image');
+            const sizeId = button.getAttribute('data-size-id'); // Get the ID of the size dropdown
+            const size = document.getElementById(sizeId).value; // Get the selected size
+
+            // Create an item object
+            const item = { name, price, image, size };
+
+            // Get the existing cart from local storage or initialize an empty array
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the new item to the cart
+            cart.push(item);
+
+            // Save the updated cart back to local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Notify the user
+            alert(`${name} (Size: ${size}) has been added to your cart!`);
+        });
+    });
+    </script>
+</body>
+</html>

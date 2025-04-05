@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          clifford: '#da373d',
+        },
+      },
+    },
+  };
+  </script>
+    <title>Niek's Store</title>
+</head>
+<body>
+  <div>
+    <div class="navbar bg-gray-800 text-white p-4 relative">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="logo">
+                    <a href="#"><img src="niek.png" alt="Logo" class="h-10"></a>
+                </div>
+                <!-- Burger Icon -->
+                <button id="burger-menu" class="block md:hidden p-2 rounded bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <!-- Menu -->
+                <div id="menu" class="menu absolute top-full left-0 w-full bg-gray-800 p-4 z-50 md:static md:flex md:bg-transparent md:p-0">
+                    <ul class="flex flex-col md:flex-row gap-4">
+                        <li><a href="home.html" class="text-white hover:text-gray-400">Home</a></li>
+                        <li><a href="men.html" class="text-white hover:text-gray-400">Men</a></li>
+                        <li><a href="women.html" class="text-white hover:text-gray-400">Women</a></li>
+                        <li><a href="kids.html" class="text-white hover:text-gray-400">Kids</a></li>
+                        <li><a href="MyCart.html" class="text-white hover:text-gray-400">My Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+ 
+
+    <form class="mt-8 bg-gray-100 p-4 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Billing Details</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                <input type="text" id="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="John Doe" required>
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="john@example.com" required>
+            </div>
+            <div>
+                <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                <input type="text" id="address" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="123 Main St" required>
+            </div>
+            <div>
+                <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                <input type="text" id="city" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="New York" required>
+            </div>
+            <div>
+                <label for="zip" class="block text-sm font-medium text-gray-700">ZIP Code</label>
+                <input type="text" id="zip" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="10001" required>
+            </div>
+            <div>
+                <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
+                <input type="text" id="country" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" placeholder="USA" required>
+            </div>
+        </div>
+        <button type="submit" class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+            Place Order
+        </button>
+    </form>
+</div>
+
+  <footer class="bg-gray-800 text-white p-4 mt-4">
+    <div class="container mx-auto flex justify-between items-center">
+            <!-- Left Section: Copyright -->
+            <p>&copy; Dilan and Casas. All rights reserved.</p>
+
+            <!-- Right Section: Terms and Conditions -->
+            <div class="flex items-center gap-4">
+                <div class="Terms-and-Conditions">
+                    <a href="https://agreementservice.svs.nike.com/ph/en_gb/rest/agreement?agreementType=termsOfUse&uxId=com.nike.commerce.ocp&country=PH&language=en&requestType=redirect" class="text-white hover:text-gray-400">
+                        Terms and Conditions
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center gap-4 mt-2">
+            <div class="facebook">
+                <a href="https://www.facebook.com/nike"><img src="facebook.png" alt="Facebook" class="h-6"></a>
+            </div>
+            <div class="twitter">
+                <a href="https://www.twitter.com/nike"><img src="twitter.png" alt="Twitter" class="h-6"></a>
+            </div>
+            <div class="instagram">
+                <a href="https://www.instagram.com/nike"><img src="instagram.png" alt="Instagram" class="h-6"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    // JavaScript to toggle the menu
+    const burgerMenu = document.getElementById('burger-menu');
+    const menu = document.getElementById('menu');
+
+    if (burgerMenu && menu) {
+        burgerMenu.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+
+    // JavaScript to handle form submission
+    const form = document.querySelector('form');
+
+    if (form) {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Show a confirmation message
+            alert('Order has been placed!');
+
+            // Redirect to index.html
+            window.location.href = 'index.html';
+        });
+    }
+</script>
+</body>
+</html>

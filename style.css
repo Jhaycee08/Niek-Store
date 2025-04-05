@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styles */
+#navbar {
+  position: fixed; /* Fix the navbar to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make it span the full width of the page */
+  background-color: #333;
+  color: white;
+  z-index: 1000; /* Ensure it stays above other elements */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+}
+
+#navbar .menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Display menu items in a row */
+  justify-content: space-around; /* Space out the menu items */
+}
+
+#navbar .menu ul li {
+  margin: 0;
+}
+
+#navbar .menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+#navbar .menu ul li a:hover {
+  color: #aaa;
+}
+
+
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr; /* 2 columns for medium screens and larger */
+    }
+}
+
+.grid-item img {
+    max-width: 200px;
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+img {
+    max-width: 100px;
+    display: block;
+}
+
+button{
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button:hover{
+    background-color: #555;
+}
