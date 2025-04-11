@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          clifford: '#da373d',
+        },
+        backgroundImage: {
+          'aboutus-bg': "url('bg.jpg')", // Replace 'background.jpg' with your image path
+        },
+      },
+    },
+  };
+</script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("xr2F0DZKCibmwoOaU"); // Replace "YOUR_USER_ID" with your EmailJS user ID
+  })();
+</script>
+<title>Niek's Store</title>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <div>
+        <div class="navbar bg-gray-800 text-white p-4 relative">
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center">
+                    <div class="logo">
+                        <a href="#"><img src="niek.png" alt="Logo" class="h-10"></a>
+                    </div>
+                    <!-- Burger Icon -->
+                    <button id="burger-menu" class="block md:hidden p-2 rounded bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                    <!-- Menu -->
+                    <div id="menu" class="menu hidden absolute top-full left-0 w-full bg-gray-800 p-4 z-50 md:static md:flex md:bg-transparent md:p-0">
+                        <ul class="flex flex-col md:flex-row gap-4">
+                            <li><a href="home.html" class="text-white hover:text-gray-400">Home</a></li>
+                            <li><a href="men.html" class="text-white hover:text-gray-400">Men</a></li>
+                            <li><a href="women.html" class="text-white hover:text-gray-400">Women</a></li>
+                            <li><a href="kids.html" class="text-white hover:text-gray-400">Kids</a></li>
+                            <li><a href="MyCart.html" class="text-white hover:text-gray-400">My Cart</a></li>
+                            <li><a href="About us.html" class="text-white hover:text-gray-400">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="aboutus bg-aboutus-bg bg-cover bg-center text-white p-8">
+        <h3>We’re More Than Just Shoes — We’re a Movement.</h3>
+        <p>At Niek, we believe every step tells a story. Founded with a passion for style, comfort, and purpose, our mission is simple: to craft shoes that empower your journey — wherever it may lead. 
+            From city streets to mountain trails, we design footwear that blends timeless design with modern innovation. Each pair is built to last, using high-quality materials and sustainable practices 
+            because we care about the footprints we leave behind — on the planet and in your life. Whether you're chasing dreams, chasing sunsets, or just chasing the bus, we’ve got your back (and your feet)</p>
+        <h3>What We Stand For</h3>
+        <p>Comfort You Can Count On – Because your feet deserve better.</p>
+        <p>Design That Speaks – Bold. Minimal. Classic. Trendy. We do it all.
+        <br>Sustainability at the Core – Eco-friendly materials, ethical practices, zero compromise.
+        <br>Community First – Built for real people with real stories.
+        <br><strong>Join us. Walk with purpose. Wear it proud.</strong></p>
+        
+        
+        <h3 class="contactus mt-9">To learn More About Niek. Contact Us</h3>
+
+        <!-- Contact Us Form -->
+        <div class="text-white p-8 mt-4 rounded-lg">
+          <form id="contact-form" class="space-y-4">
+            <!-- Name Field -->
+            <div>
+              <label for="name" class="block text-sm font-medium">Name</label>
+              <input type="text" id="name" name="name" required
+                class="w-full mt-1 p-2 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+            </div>
+        
+            <!-- Email Field -->
+            <div>
+              <label for="email" class="block text-sm font-medium">Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full mt-1 p-2 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+            </div>
+        
+            <!-- Message Field -->
+            <div>
+              <label for="message" class="block text-sm font-medium">Message</label>
+              <textarea id="message" name="message" rows="4" required
+                class="w-full mt-1 p-2 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"></textarea>
+            </div>
+        
+            <!-- Submit Button -->
+            <div>
+              <button type="submit"
+                class="w-full bg-clifford text-white py-2 px-4 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer class="bg-gray-800 text-white p-4 mt-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Left Section: Copyright -->
+            <p>&copy; Dilan and Casas. All rights reserved.</p>
+
+            <!-- Right Section: Terms and Conditions -->
+            <div class="flex items-center gap-4">
+                <div class="Terms-and-Conditions">
+                    <a href="https://agreementservice.svs.nike.com/ph/en_gb/rest/agreement?agreementType=termsOfUse&uxId=com.nike.commerce.ocp&country=PH&language=en&requestType=redirect" class="text-white hover:text-gray-400">
+                        Terms and Conditions
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center gap-4 mt-2">
+            <div class="facebook">
+                <a href="https://www.facebook.com/nike"><img src="facebook.png" alt="Facebook" class="h-6"></a>
+            </div>
+            <div class="twitter">
+                <a href="https://www.twitter.com/nike"><img src="twitter.png" alt="Twitter" class="h-6"></a>
+            </div>
+            <div class="instagram">
+                <a href="https://www.instagram.com/nike"><img src="instagram.png" alt="Instagram" class="h-6"></a>
+            </div>
+        </div>
+    </div>
+    </footer>
+ <!-- JavaScript for Menu Toggle -->
+ <script>
+  // JavaScript to toggle the menu
+  const burgerMenu = document.getElementById('burger-menu');
+  const menu = document.getElementById('menu');
+
+  if (burgerMenu && menu) {
+      burgerMenu.addEventListener('click', () => {
+          menu.classList.toggle('hidden'); // Toggles the 'hidden' class
+      });
+  } else {
+      console.error('Burger menu or menu element not found');
+  }
+</script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Send form data using EmailJS
+    emailjs.sendForm('service_cqaojun', 'template_p4i03lo', this)
+      .then(function () {
+        alert('Message sent successfully!');
+      }, function (error) {
+        alert('Failed to send message. Please try again later.');
+        console.error('EmailJS Error:', error);
+      });
+  });
+</script>
+</body>
+</html>

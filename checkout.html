@@ -32,13 +32,14 @@
                     </svg>
                 </button>
                 <!-- Menu -->
-                <div id="menu" class="menu absolute top-full left-0 w-full bg-gray-800 p-4 z-50 md:static md:flex md:bg-transparent md:p-0">
+                <div id="menu" class="menu hidden absolute top-full left-0 w-full bg-gray-800 p-4 z-50 md:static md:flex md:bg-transparent md:p-0">
                     <ul class="flex flex-col md:flex-row gap-4">
                         <li><a href="home.html" class="text-white hover:text-gray-400">Home</a></li>
                         <li><a href="men.html" class="text-white hover:text-gray-400">Men</a></li>
                         <li><a href="women.html" class="text-white hover:text-gray-400">Women</a></li>
                         <li><a href="kids.html" class="text-white hover:text-gray-400">Kids</a></li>
                         <li><a href="MyCart.html" class="text-white hover:text-gray-400">My Cart</a></li>
+                        <li><a href="About us.html" class="text-white hover:text-gray-400">About Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -116,8 +117,10 @@
 
     if (burgerMenu && menu) {
         burgerMenu.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            menu.classList.toggle('hidden'); // Toggles the 'hidden' class
         });
+    } else {
+        console.error('Burger menu or menu element not found');
     }
 
     // JavaScript to handle form submission
